@@ -33,5 +33,16 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1.Properties {
                 return ((string)(this["RescueBBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ASATA408\\SQLEXPRESSSAUL;Initial Catalog=RescueBB;Persist Security Inf" +
+            "o=True;User ID=sa;Password=1234")]
+        public string RescueBBConnectionString1 {
+            get {
+                return ((string)(this["RescueBBConnectionString1"]));
+            }
+        }
     }
 }

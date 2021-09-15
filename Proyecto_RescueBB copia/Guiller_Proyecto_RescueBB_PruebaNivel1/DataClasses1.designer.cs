@@ -36,7 +36,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::Guiller_Proyecto_RescueBB_PruebaNivel1.Properties.Settings.Default.RescueBBConnectionString, mappingSource)
+				base(global::Guiller_Proyecto_RescueBB_PruebaNivel1.Properties.Settings.Default.RescueBBConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

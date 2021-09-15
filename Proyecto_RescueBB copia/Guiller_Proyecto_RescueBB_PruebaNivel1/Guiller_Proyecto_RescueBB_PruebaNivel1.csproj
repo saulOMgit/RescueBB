@@ -190,5 +190,8 @@
   <ItemGroup>
     <None Include="Resources\Fall %2836x36%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\coinsound.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

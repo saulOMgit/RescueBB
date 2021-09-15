@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Guiller_Proyecto_RescueBB_PruebaNivel1
 {
@@ -89,6 +90,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                                 x.Visible = false;
                                 score++;
                                 lbScore.Text = (int.Parse(lbScore.Text) + 1).ToString();
+                                playSimpleSound();
                             }
                         }
 
@@ -213,7 +215,13 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                 }
             }
 
-            private void Level3_Load(object sender, EventArgs e)
+        private void playSimpleSound()
+        {
+            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\RescueBB\Proyecto_RescueBB copia\Guiller_Proyecto_RescueBB_PruebaNivel1\Resources\coinsound.wav");
+            simpleSound.Play();
+        }
+
+        private void Level3_Load(object sender, EventArgs e)
             {
             }
         }
