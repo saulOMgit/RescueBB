@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="RescueBB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ASATA409\SQLEXPRESSGUILLE;Initial Catalog=RescueBB;Persist Security Info=True;User ID=sa" SettingsObjectName="Guiller_Proyecto_RescueBB_PruebaNivel1.Properties.Settings" SettingsPropertyName="RescueBBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.JugadorPuntaje" Member="JugadorPuntaje">
+    <Type Name="JugadorPuntaje">
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Monedas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nivel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
