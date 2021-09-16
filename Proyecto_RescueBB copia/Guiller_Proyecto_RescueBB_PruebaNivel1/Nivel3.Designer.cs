@@ -111,7 +111,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             // enemy1
             // 
             this.enemy1.BackColor = System.Drawing.Color.Transparent;
-            this.enemy1.Image = global::Guiller_Proyecto_RescueBB_PruebaNivel1.Properties.Resources.Fall__36x36_;
+            this.enemy1.Image = global::Guiller_Proyecto_RescueBB_PruebaNivel1.Properties.Resources.Pato;
             this.enemy1.Location = new System.Drawing.Point(1120, 290);
             this.enemy1.Name = "enemy1";
             this.enemy1.Size = new System.Drawing.Size(47, 40);

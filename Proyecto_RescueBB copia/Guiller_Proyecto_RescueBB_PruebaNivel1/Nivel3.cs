@@ -139,6 +139,16 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             if (enemy1.Left < verticalPlatform1.Left || enemy1.Left + enemy1.Width > verticalPlatform1.Left + verticalPlatform1.Width)
             {
                 enemyOneSpeed = -enemyOneSpeed;
+
+                if (enemy1.Left < verticalPlatform1.Left)
+                {
+                    enemy1.Image = Properties.Resources.patoright;
+                }
+                if (enemy1.Left + enemy1.Width > verticalPlatform1.Left + verticalPlatform1.Width)
+                {
+                    enemy1.Image = Properties.Resources.Pato;
+                }
+
             }
 
             //Game Over si nos caemos al vacio

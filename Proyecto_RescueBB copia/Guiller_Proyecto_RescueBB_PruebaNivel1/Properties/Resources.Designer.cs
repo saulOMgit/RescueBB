@@ -122,9 +122,9 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Fall__36x36_ {
+        internal static System.Drawing.Bitmap enemyright {
             get {
-                object obj = ResourceManager.GetObject("Fall (36x36)", resourceCulture);
+                object obj = ResourceManager.GetObject("enemyright", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -165,6 +165,26 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1.Properties {
         internal static System.Drawing.Bitmap logoRESCUE {
             get {
                 object obj = ResourceManager.GetObject("logoRESCUE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pato {
+            get {
+                object obj = ResourceManager.GetObject("Pato", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap patoright {
+            get {
+                object obj = ResourceManager.GetObject("patoright", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

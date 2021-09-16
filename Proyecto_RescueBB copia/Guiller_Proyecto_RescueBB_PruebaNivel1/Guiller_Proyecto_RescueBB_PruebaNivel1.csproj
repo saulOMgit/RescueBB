@@ -188,11 +188,13 @@
     <None Include="Resources\example.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fall %2836x36%29.png" />
+    <None Include="Resources\Pato.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Battleship.wav" />
     <Content Include="Resources\coinsound.wav" />
+    <Content Include="Resources\enemyright.jpg" />
+    <Content Include="Resources\patoright.png" />
     <Content Include="Resources\playerleft.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

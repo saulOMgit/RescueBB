@@ -130,14 +130,32 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                 if (enemy1.Left < pictureBox4.Left || enemy1.Left + enemy1.Width > pictureBox4.Left + pictureBox4.Width)
                 {
                     enemyOneSpeed = -enemyOneSpeed;
-                }
+
+                    if (enemy1.Left < pictureBox4.Left)
+                    {
+                        enemy1.Image = Properties.Resources.enemyright;
+                    }
+                    if (enemy1.Left + enemy1.Width > pictureBox4.Left + pictureBox4.Width)
+                    {
+                        enemy1.Image = Properties.Resources.Enemy;
+                    }
+            }
 
                 enemy2.Left -= enemyTwoSpeed;
 
                 if (enemy2.Left < pictureBox9.Left || enemy2.Left + enemy2.Width > pictureBox9.Left + pictureBox9.Width)
                 {
                     enemyTwoSpeed = -enemyTwoSpeed;
-                }
+
+                    if (enemy2.Left < pictureBox9.Left)
+                    {
+                        enemy2.Image = Properties.Resources.enemyright;
+                    }
+                    if (enemy2.Left + enemy2.Width > pictureBox9.Left + pictureBox9.Width)
+                    {
+                        enemy2.Image = Properties.Resources.Enemy;
+                    }
+            }
 
                 //Game Over si nos caemos al vacio
                 if (player.Top + player.Height > this.ClientSize.Height + 50)
