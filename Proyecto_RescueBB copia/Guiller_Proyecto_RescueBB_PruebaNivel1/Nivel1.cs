@@ -16,6 +16,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
         //Conexion SQL
         DataClasses1DataContext usuarios = new DataClasses1DataContext();
 
+        //Variables tales como los movimientos tanto de nuestro personaje como de los enemigos y de las plataformas, tambien la puntuación.
         bool goLeft, goRight, jumping;
         int jumpSpeed;
         int force;
@@ -28,13 +29,14 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
         int enemyOneSpeed = 11;
         int enemyTwoSpeed = 6;
 
-
+        //Aqui importara el username dado en la pantalla de Login
         public Nivel1(string valor)
         {
             InitializeComponent();
             lbUser.Text = valor.ToString();
         }
 
+        //Esto es el corazón del proyecto y lo que contendra la mayoría de la operativa
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
             lbScore.Text = score.ToString();         
@@ -84,7 +86,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                         }
                         x.BringToFront();
                     }
-                    //eventos al recolectar monedar
+                    //eventos al recolectar monedas
                     if ((string)x.Tag == "coin")
                     {
                         if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
@@ -201,7 +203,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
         private void Form1_Load(object sender, EventArgs e)
         {
         }
-
+        //Definición de lo que sucede al pulsar una determinada tecla
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
@@ -223,7 +225,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                 Application.Exit();
             }
         }
-
+        //Definición de lo que sucede al pulsar una determinada tecla
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
@@ -239,6 +241,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                 jumping = false;
             }
         }
+        //BSO Por Guillermo Iglesias
         private void playSimpleSound()
         {
             SoundPlayer simpleSound = new SoundPlayer(@"..\..\Resources\coinsound.wav");

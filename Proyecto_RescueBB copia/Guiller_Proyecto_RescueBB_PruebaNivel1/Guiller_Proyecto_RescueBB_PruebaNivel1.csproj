@@ -194,8 +194,13 @@
     <Content Include="Resources\Battleship.wav" />
     <Content Include="Resources\coinsound.wav" />
     <Content Include="Resources\enemyright.jpg" />
+    <Content Include="Resources\Level1Music.wav" />
+    <Content Include="Resources\Level2Music.wav" />
+    <Content Include="Resources\Level3Music.wav" />
+    <Content Include="Resources\MainMusic.wav" />
     <Content Include="Resources\patoright.png" />
     <Content Include="Resources\playerleft.jpg" />
+    <Content Include="Resources\VictoryGameMusic.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

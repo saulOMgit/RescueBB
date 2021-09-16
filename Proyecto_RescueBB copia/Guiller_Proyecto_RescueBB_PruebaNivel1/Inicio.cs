@@ -13,6 +13,9 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
 {
     public partial class Inicio : System.Windows.Forms.Form
     {
+        //Esta va a ser nuestra primera ventana, Servira para iniciar sesión en el juego
+
+        //Conexión con la Base de datos
         DataClasses1DataContext usuarios = new DataClasses1DataContext();
         public Inicio()
         {
@@ -21,6 +24,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             playSimpleSound();
         }
 
+        //Carga en el Grid los datos de nuestra Database, Serán ordenador por las monedas para dar sensación de Ranking
         void cargarGrid()
         {
             var listargrid = from u in usuarios.JugadorPuntaje
@@ -29,11 +33,14 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             GridDatos.DataSource = listargrid;
         }
 
+        //Con esto importaremos el usuario para que nos ponga el nombre en la parte superior de cada pantalla y tambien lo usaremos para actualizar la Database
         public void Valor(string _dato)
         {
             txtNick.Text = _dato;
         }
 
+        //Comprobamos que hayamos ingresado un nombre, para evitarlo en caso contrario
+        //En caso de que no exista el usuario lo creara en la base de datos y si existe podremos jugar igual sobreescribiendo la partida
         private void btnNuevaPartida_Click(object sender, EventArgs e)
         {
             if (txtNick.Text == "")
@@ -67,18 +74,20 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
         }
 
        
-
+        //BSO Por Guillermo Iglesias
         private void playSimpleSound()
         {
             try
             {
 
-                SoundPlayer simpleSound = new SoundPlayer(@"..\..\Resources\Battleship.wav");
+                //SoundPlayer simpleSound = new SoundPlayer(@"..\..\Resources\Battleship.wav");
+                SoundPlayer simpleSound = new SoundPlayer(Properties.Resources.MainMusic);
+
                 simpleSound.PlayLooping();
             }
             catch { }
         }
-
+        //Botón para salir de la aplicación
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();

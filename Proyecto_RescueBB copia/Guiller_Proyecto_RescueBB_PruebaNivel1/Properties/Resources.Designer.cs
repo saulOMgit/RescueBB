@@ -80,6 +80,15 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream coinsound {
+            get {
+                return ResourceManager.GetStream("coinsound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap door_closed {
@@ -150,6 +159,33 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Level1Music {
+            get {
+                return ResourceManager.GetStream("Level1Music", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Level2Music {
+            get {
+                return ResourceManager.GetStream("Level2Music", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Level3Music {
+            get {
+                return ResourceManager.GetStream("Level3Music", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap logoBB {
@@ -166,6 +202,15 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1.Properties {
             get {
                 object obj = ResourceManager.GetObject("logoRESCUE", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MainMusic {
+            get {
+                return ResourceManager.GetStream("MainMusic", resourceCulture);
             }
         }
         
@@ -216,6 +261,15 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1.Properties {
             get {
                 object obj = ResourceManager.GetObject("Purple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream VictoryGameMusic {
+            get {
+                return ResourceManager.GetStream("VictoryGameMusic", resourceCulture);
             }
         }
         
