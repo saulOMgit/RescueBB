@@ -38,3 +38,4 @@ C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\RescueBB\Proyecto_RescueBB copi
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\RescueBB\Proyecto_RescueBB copia\Guiller_Proyecto_RescueBB_PruebaNivel1\obj\Debug\Guiller_Proyecto_RescueBB_PruebaNivel1.Properties.Resources.resources
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\RescueBB\Proyecto_RescueBB copia\Guiller_Proyecto_RescueBB_PruebaNivel1\obj\Debug\Guiller_Proyecto_RescueBB_PruebaNivel1.csproj.GenerateResource.cache
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\RescueBB\Proyecto_RescueBB copia\Guiller_Proyecto_RescueBB_PruebaNivel1\obj\Debug\Guiller_Proyecto_RescueBB_PruebaNivel1.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\RescueBB\Proyecto_RescueBB copia\Guiller_Proyecto_RescueBB_PruebaNivel1\obj\Debug\Guiller_Proyecto_RescueBB_PruebaNivel1.csproj.AssemblyReference.cache

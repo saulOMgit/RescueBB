@@ -61,12 +61,11 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1.Properties {
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
         /// </summary>
-        internal static System.Drawing.Bitmap Background {
+        internal static System.IO.UnmanagedMemoryStream Battleship {
             get {
-                object obj = ResourceManager.GetObject("Background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetStream("Battleship", resourceCulture);
             }
         }
         
@@ -123,59 +122,9 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap example {
-            get {
-                object obj = ResourceManager.GetObject("example", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Fall__36x36_ {
             get {
                 object obj = ResourceManager.GetObject("Fall (36x36)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FONDOLEVEL1 {
-            get {
-                object obj = ResourceManager.GetObject("FONDOLEVEL1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FONDOLEVEL2 {
-            get {
-                object obj = ResourceManager.GetObject("FONDOLEVEL2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FONDOLEVEL2_2 {
-            get {
-                object obj = ResourceManager.GetObject("FONDOLEVEL2_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap globe_86243_640 {
-            get {
-                object obj = ResourceManager.GetObject("globe-86243_640", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +175,16 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1.Properties {
         internal static System.Drawing.Bitmap player {
             get {
                 object obj = ResourceManager.GetObject("player", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap playerleft {
+            get {
+                object obj = ResourceManager.GetObject("playerleft", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

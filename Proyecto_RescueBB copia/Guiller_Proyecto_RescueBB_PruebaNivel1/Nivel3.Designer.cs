@@ -438,7 +438,6 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Nivel3";
             this.Text = "Nivel3";
-            this.Load += new System.EventHandler(this.Level3_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.goal)).EndInit();

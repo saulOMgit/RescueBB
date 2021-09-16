@@ -34,71 +34,71 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             lbScore.Text = score.ToString();
         }
 
-            private void MainGameTimerEvent(object sender, EventArgs e)
+        private void MainGameTimerEvent(object sender, EventArgs e)
+        {
+            player.Top += jumpSpeed;
+
+            if (goLeft == true)
             {
-                player.Top += jumpSpeed;
+                player.Left -= playerSpeed;
+            }
+            if (goRight == true)
+            {
+                player.Left += playerSpeed;
+            }
 
-                if (goLeft == true)
-                {
-                    player.Left -= playerSpeed;
-                }
-                if (goRight == true)
-                {
-                    player.Left += playerSpeed;
-                }
+            if (jumping == true && force < 0)
+            {
+                jumping = false;
+            }
 
-                if (jumping == true && force < 0)
-                {
-                    jumping = false;
-                }
+            if (jumping == true)
+            {
+                jumpSpeed = -10;
+                force -= 1;
+            }
+            else
+            {
+                jumpSpeed = 15;
+            }
 
-                if (jumping == true)
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox)
                 {
-                    jumpSpeed = -10;
-                    force -= 1;
-                }
-                else
-                {
-                    jumpSpeed = 15;
-                }
-
-                foreach (Control x in this.Controls)
-                {
-                    if (x is PictureBox)
+                    //Evento que nos permite volver al saltar volviendo a estar en contacto con una plataforma
+                    if ((string)x.Tag == "platform")
                     {
-                        //Evento que nos permite volver al saltar volviendo a estar en contacto con una plataforma
-                        if ((string)x.Tag == "platform")
+                        if (player.Bounds.IntersectsWith(x.Bounds))
                         {
-                            if (player.Bounds.IntersectsWith(x.Bounds))
-                            {
-                                force = 8;
-                                player.Top = x.Top - player.Height;
+                            force = 8;
+                            player.Top = x.Top - player.Height;
 
-                                if ((string)x.Name == "horizontalPlatform1" && goLeft == false || (string)x.Name == "horizontalPlatform1" && goRight == false)
-                                {
-                                    player.Left -= horizontalSpeed;
-                                }
-                            }
-                            x.BringToFront();
-                        }
-
-                        //eventos al recolectar monedas
-                        if ((string)x.Tag == "coin")
-                        {
-                            if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
+                            if ((string)x.Name == "horizontalPlatform1" && goLeft == false || (string)x.Name == "horizontalPlatform1" && goRight == false)
                             {
-                                x.Visible = false;
-                                score++;
-                                lbScore.Text = (int.Parse(lbScore.Text) + 1).ToString();
-                                playSimpleSound();
+                                player.Left -= horizontalSpeed;
                             }
                         }
+                        x.BringToFront();
+                    }
 
-                        //evento al chocar con enemigos
-                        if ((string)x.Tag == "enemy")
+                    //eventos al recolectar monedas
+                    if ((string)x.Tag == "coin")
+                    {
+                        if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                         {
-                            if (player.Bounds.IntersectsWith(x.Bounds))
-                            {
+                            x.Visible = false;
+                            score++;
+                            lbScore.Text = (int.Parse(lbScore.Text) + 1).ToString();
+                            playSimpleSound();
+                        }
+                    }
+
+                    //evento al chocar con enemigos
+                    if ((string)x.Tag == "enemy")
+                    {
+                        if (player.Bounds.IntersectsWith(x.Bounds))
+                        {
                             JugadorPuntaje myJugador = usuarios.JugadorPuntaje.Single(u =>
                                 u.Nombre == lbUser.Text);
                             myJugador.Nivel = "Nivel 3";
@@ -113,116 +113,117 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                             Nivel1 lvl1 = new Nivel1(lbUser.Text);
                             lvl1.Show();
                             this.Close();
-                            }
                         }
                     }
                 }
+            }
 
             //Movimiento de las plataformas
             verticalPlatform1.Top += verticalSpeed;
 
-            if (verticalPlatform1.Top < 135 || verticalPlatform1.Top > 478) 
+            if (verticalPlatform1.Top < 135 || verticalPlatform1.Top > 478)
             {
                 verticalSpeed = -verticalSpeed;
             }
 
             horizontalPlatform1.Left -= horizontalSpeed;
 
-                if (horizontalPlatform1.Left < 575 || horizontalPlatform1.Left > 955) 
-                {
-                    horizontalSpeed = -horizontalSpeed;
-                }
+            if (horizontalPlatform1.Left < 575 || horizontalPlatform1.Left > 955)
+            {
+                horizontalSpeed = -horizontalSpeed;
+            }
 
             //Movimiento de los enemigos
             enemy1.Left -= enemyOneSpeed;
 
-                if (enemy1.Left < verticalPlatform1.Left || enemy1.Left + enemy1.Width > verticalPlatform1.Left + verticalPlatform1.Width)
-                {
-                    enemyOneSpeed = -enemyOneSpeed;
-                }
-
-                //Game Over si nos caemos al vacio
-                if (player.Top + player.Height > this.ClientSize.Height + 50)
-                {
-                    JugadorPuntaje myJugador = usuarios.JugadorPuntaje.Single(u =>
-                    u.Nombre == lbUser.Text);
-                    myJugador.Nivel = "Nivel 3";
-                    myJugador.Monedas = score;
-                    usuarios.SubmitChanges();
-
-
-                    gametimer.Stop();
-                    lbScore.Text = score.ToString();
-                    lbEvento.Text = "Sa matao Paco!";
-
-                    //Si mueres empiezas desde el principio
-                    Nivel1 lvl1 = new Nivel1(lbUser.Text);
-                    lvl1.Show();
-                    this.Close();
-                }
-
-                //Evento de Victoria (LLegar al final)
-                if (player.Bounds.IntersectsWith(goal.Bounds))
-                {
-                    JugadorPuntaje myJugador = usuarios.JugadorPuntaje.Single(u =>
-                    u.Nombre == lbUser.Text);
-                    myJugador.Nivel = "Nivel 3";
-                    myJugador.Monedas = int.Parse(lbScore.Text);
-                    usuarios.SubmitChanges();
-
-                    gametimer.Stop();
-                    lbEvento.Text = "Ganaste bro!";
-
-                    this.Hide();
-                    Fin final = new Fin();
-                    final.Show();
-                }
-            }
-
-            private void KeyIsDown(object sender, KeyEventArgs e)
+            if (enemy1.Left < verticalPlatform1.Left || enemy1.Left + enemy1.Width > verticalPlatform1.Left + verticalPlatform1.Width)
             {
-                if (e.KeyCode == Keys.Left)
-                {
-                    goLeft = true;
-                }
-                if (e.KeyCode == Keys.Right)
-                {
-                    goRight = true;
-                }
-                if (e.KeyCode == Keys.Space && jumping == false)
-                {
-                    jumping = true;
-                }
-                if (e.KeyCode == Keys.Escape) //SI PULSAMOS EL ESCAPE NOS CIERRA EL JUEGO
-                {
-                    Application.Exit();
-                }
+                enemyOneSpeed = -enemyOneSpeed;
             }
+
+            //Game Over si nos caemos al vacio
+            if (player.Top + player.Height > this.ClientSize.Height + 50)
+            {
+                JugadorPuntaje myJugador = usuarios.JugadorPuntaje.Single(u =>
+                u.Nombre == lbUser.Text);
+                myJugador.Nivel = "Nivel 3";
+                myJugador.Monedas = score;
+                usuarios.SubmitChanges();
+
+
+                gametimer.Stop();
+                lbScore.Text = score.ToString();
+                lbEvento.Text = "Sa matao Paco!";
+
+                //Si mueres empiezas desde el principio
+                Nivel1 lvl1 = new Nivel1(lbUser.Text);
+                lvl1.Show();
+                this.Close();
+            }
+
+            //Evento de Victoria (LLegar al final)
+            if (player.Bounds.IntersectsWith(goal.Bounds))
+            {
+                JugadorPuntaje myJugador = usuarios.JugadorPuntaje.Single(u =>
+                u.Nombre == lbUser.Text);
+                myJugador.Nivel = "Nivel 3";
+                myJugador.Monedas = int.Parse(lbScore.Text);
+                usuarios.SubmitChanges();
+
+                gametimer.Stop();
+                lbEvento.Text = "Ganaste bro!";
+
+                this.Hide();
+                Fin final = new Fin();
+                final.Show();
+            }
+        }
+
+        private void KeyIsDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                goLeft = true;
+                player.Image = Properties.Resources.playerleft;
+
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                goRight = true;
+                player.Image = Properties.Resources.player;
+
+            }
+            if (e.KeyCode == Keys.Space && jumping == false)
+            {
+                jumping = true;
+            }
+            if (e.KeyCode == Keys.Escape) //SI PULSAMOS EL ESCAPE NOS CIERRA EL JUEGO
+            {
+                Application.Exit();
+            }
+        }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
             {
-                if (e.KeyCode == Keys.Left)
-                {
-                    goLeft = false;
-                }
-                if (e.KeyCode == Keys.Right)
-                {
-                    goRight = false;
-                }
-                if (jumping == true)
-                {
-                    jumping = false;
-                }
+                goLeft = false;
             }
+            if (e.KeyCode == Keys.Right)
+            {
+                goRight = false;
+            }
+            if (jumping == true)
+            {
+                jumping = false;
+            }
+        }
 
         private void playSimpleSound()
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\RescueBB\Proyecto_RescueBB copia\Guiller_Proyecto_RescueBB_PruebaNivel1\Resources\coinsound.wav");
+            SoundPlayer simpleSound = new SoundPlayer(@"..\..\Resources\coinsound.wav");
             simpleSound.Play();
         }
 
-        private void Level3_Load(object sender, EventArgs e)
-            {
-            }
-        }
     }
+}

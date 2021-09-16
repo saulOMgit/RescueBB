@@ -188,10 +188,12 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             if (e.KeyCode == Keys.Left)
             {
                 goLeft = true;
+                player.Image = Properties.Resources.playerleft;
             }
             if (e.KeyCode == Keys.Right)
             {
                 goRight = true;
+                player.Image = Properties.Resources.player;
             }
             if (e.KeyCode == Keys.Space && jumping == false)
             {
@@ -220,7 +222,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
         }
         private void playSimpleSound()
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\RescueBB\Proyecto_RescueBB copia\Guiller_Proyecto_RescueBB_PruebaNivel1\Resources\coinsound.wav");
+            SoundPlayer simpleSound = new SoundPlayer(@"..\..\Resources\coinsound.wav");
             simpleSound.Play();
         }
     }

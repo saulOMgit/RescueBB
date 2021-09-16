@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Guiller_Proyecto_RescueBB_PruebaNivel1
 {
@@ -17,6 +18,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
         {
             InitializeComponent();
             cargarGrid();
+            playSimpleSound();
         }
 
         void cargarGrid()
@@ -64,8 +66,17 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             } 
         }
 
-        private void Inicio_Load(object sender, EventArgs e)
+       
+
+        private void playSimpleSound()
         {
+            try
+            {
+
+                SoundPlayer simpleSound = new SoundPlayer(@"..\..\Resources\Battleship.wav");
+                simpleSound.PlayLooping();
+            }
+            catch { }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
