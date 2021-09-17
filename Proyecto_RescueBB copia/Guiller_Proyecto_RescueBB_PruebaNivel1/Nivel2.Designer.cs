@@ -439,6 +439,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Nivel2";
             this.Text = "Nivel2";
             this.Load += new System.EventHandler(this.Nivel2_Load);

@@ -66,6 +66,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Consolas", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(154, 34);
             this.label1.Name = "label1";
@@ -201,6 +202,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(280, 291);
             this.label2.Name = "label2";
@@ -213,6 +215,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = global::Guiller_Proyecto_RescueBB_PruebaNivel1.Properties.Resources.Gray;
             this.ClientSize = new System.Drawing.Size(731, 537);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSalir);
@@ -228,6 +231,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.GridDatos);
+            this.MaximizeBox = false;
             this.Name = "Fin";
             this.Text = "Fin";
             this.Load += new System.EventHandler(this.Fin_Load);

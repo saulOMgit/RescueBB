@@ -188,6 +188,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             this.Controls.Add(this.btnNuevaPartida);
             this.Controls.Add(this.txtNick);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Inicio";
             this.Text = "Inicio";
             ((System.ComponentModel.ISupportInitialize)(this.GridDatos)).EndInit();
