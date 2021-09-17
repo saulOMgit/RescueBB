@@ -32,6 +32,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                 InitializeComponent();
                 lbUser.Text = valor.ToString();
                 lbScore.Text = score.ToString();
+                playBackground();
             }
 
             private void MainGameTimerEvent(object sender, EventArgs e)
@@ -89,9 +90,11 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                                 x.Visible = false;
                                 score++;
                                 lbScore.Text = (int.Parse(lbScore.Text) + 1).ToString();
-                                playSimpleSound();
-                            }
+                                wMediaPlayer.URL = @"C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\RescueBB\Proyecto_RescueBB copia\Guiller_Proyecto_RescueBB_PruebaNivel1\Resources\coinsound.wav";
+                                wMediaPlayer.Ctlcontrols.play();
+
                         }
+                    }
                         //evento al chocar con enemigos
                         if ((string)x.Tag == "enemy")
                         {
@@ -219,7 +222,12 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                 }
             }
 
-            private void KeyIsUp(object sender, KeyEventArgs e)
+        private void Nivel2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KeyIsUp(object sender, KeyEventArgs e)
             {
                 if (e.KeyCode == Keys.Left)
                 {
@@ -234,11 +242,12 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                     jumping = false;
                 }
             }
-            private void playSimpleSound()
-            {
-                SoundPlayer simpleSound = new SoundPlayer(@"..\..\Resources\coinsound.wav");
-                simpleSound.Play();
-            }
-
+        //BSO por Don Guillermo Iglesias
+        private void playBackground()
+        {
+            SoundPlayer background = new SoundPlayer(Properties.Resources.Level2Music);
+            background.PlayLooping();
         }
+
+    }
     }

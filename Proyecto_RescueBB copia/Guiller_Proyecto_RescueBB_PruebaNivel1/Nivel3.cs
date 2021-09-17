@@ -32,6 +32,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             InitializeComponent();
             lbUser.Text = valor.ToString();
             lbScore.Text = score.ToString();
+            playBackground();
         }
 
         private void MainGameTimerEvent(object sender, EventArgs e)
@@ -90,7 +91,10 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                             x.Visible = false;
                             score++;
                             lbScore.Text = (int.Parse(lbScore.Text) + 1).ToString();
-                            playSimpleSound();
+
+                            wMediaPlayer.URL = @"C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\RescueBB\Proyecto_RescueBB copia\Guiller_Proyecto_RescueBB_PruebaNivel1\Resources\coinsound.wav";
+                            wMediaPlayer.Ctlcontrols.play();
+
                         }
                     }
 
@@ -229,10 +233,11 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             }
         }
 
-        private void playSimpleSound()
+        private void playBackground()
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"..\..\Resources\coinsound.wav");
-            simpleSound.Play();
+            SoundPlayer background = new SoundPlayer(Properties.Resources.Level3Music);
+            background.PlayLooping();
+
         }
 
     }

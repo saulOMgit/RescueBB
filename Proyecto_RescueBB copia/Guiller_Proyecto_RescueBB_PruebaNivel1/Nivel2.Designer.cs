@@ -59,6 +59,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             this.lbScore = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gametimer = new System.Windows.Forms.Timer(this.components);
+            this.wMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalPlatform1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -82,6 +83,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wMediaPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -389,6 +391,16 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             this.gametimer.Interval = 20;
             this.gametimer.Tick += new System.EventHandler(this.MainGameTimerEvent);
             // 
+            // wMediaPlayer
+            // 
+            this.wMediaPlayer.Enabled = true;
+            this.wMediaPlayer.Location = new System.Drawing.Point(12, 38);
+            this.wMediaPlayer.Name = "wMediaPlayer";
+            this.wMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wMediaPlayer.OcxState")));
+            this.wMediaPlayer.Size = new System.Drawing.Size(59, 36);
+            this.wMediaPlayer.TabIndex = 47;
+            this.wMediaPlayer.Visible = false;
+            // 
             // Nivel2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,6 +409,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             this.BackgroundImage = global::Guiller_Proyecto_RescueBB_PruebaNivel1.Properties.Resources.Yellow;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1179, 614);
+            this.Controls.Add(this.wMediaPlayer);
             this.Controls.Add(this.lbEvento);
             this.Controls.Add(this.lbScore);
             this.Controls.Add(this.label1);
@@ -428,6 +441,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Nivel2";
             this.Text = "Nivel2";
+            this.Load += new System.EventHandler(this.Nivel2_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -453,6 +467,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wMediaPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,5 +503,6 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
         private System.Windows.Forms.Label lbScore;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer gametimer;
+        private AxWMPLib.AxWindowsMediaPlayer wMediaPlayer;
     }
 }

@@ -34,11 +34,14 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
         {
             InitializeComponent();
             lbUser.Text = valor.ToString();
+            playBackground();
+
         }
 
         //Esto es el corazón del proyecto y lo que contendra la mayoría de la operativa
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
+
             lbScore.Text = score.ToString();         
 
             player.Top += jumpSpeed;
@@ -93,7 +96,9 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                         {
                             x.Visible = false;
                             score++;
-                            playSimpleSound();
+
+                            wMediaPlayer.URL = @"C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\RescueBB\Proyecto_RescueBB copia\Guiller_Proyecto_RescueBB_PruebaNivel1\Resources\coinsound.wav";
+                            wMediaPlayer.Ctlcontrols.play();
                         }
                     }
 
@@ -241,11 +246,13 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
                 jumping = false;
             }
         }
+       
         //BSO Por Guillermo Iglesias
-        private void playSimpleSound()
+        private void playBackground()
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"..\..\Resources\coinsound.wav");
-            simpleSound.Play();
+            SoundPlayer background = new SoundPlayer(Properties.Resources.Level1Music);            
+            background.PlayLooping();          
+            
         }
     }
 }

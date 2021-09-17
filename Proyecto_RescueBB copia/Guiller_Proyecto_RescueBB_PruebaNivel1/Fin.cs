@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Guiller_Proyecto_RescueBB_PruebaNivel1
 {
@@ -17,6 +18,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
         {
             InitializeComponent();
             cargarGrid();
+            playBackground();
         }
 
         void cargarGrid()
@@ -42,5 +44,12 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             Inicio initation = new Inicio();
             initation.Show();
         }
+        private void playBackground()
+        {
+            SoundPlayer background = new SoundPlayer(Properties.Resources.VictoryGameMusic);
+            background.PlayLooping();
+
+        }
+
     }
 }

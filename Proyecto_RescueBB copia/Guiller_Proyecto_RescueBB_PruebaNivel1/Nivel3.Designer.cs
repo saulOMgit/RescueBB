@@ -60,6 +60,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.wMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.goal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
@@ -84,6 +85,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wMediaPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // goal
@@ -398,6 +400,16 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Tag = "platform";
             // 
+            // wMediaPlayer
+            // 
+            this.wMediaPlayer.Enabled = true;
+            this.wMediaPlayer.Location = new System.Drawing.Point(12, 190);
+            this.wMediaPlayer.Name = "wMediaPlayer";
+            this.wMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wMediaPlayer.OcxState")));
+            this.wMediaPlayer.Size = new System.Drawing.Size(107, 49);
+            this.wMediaPlayer.TabIndex = 54;
+            this.wMediaPlayer.Visible = false;
+            // 
             // Nivel3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,6 +418,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             this.BackgroundImage = global::Guiller_Proyecto_RescueBB_PruebaNivel1.Properties.Resources.Purple;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1179, 614);
+            this.Controls.Add(this.wMediaPlayer);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -464,6 +477,7 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wMediaPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,5 +514,6 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private AxWMPLib.AxWindowsMediaPlayer wMediaPlayer;
     }
 }
