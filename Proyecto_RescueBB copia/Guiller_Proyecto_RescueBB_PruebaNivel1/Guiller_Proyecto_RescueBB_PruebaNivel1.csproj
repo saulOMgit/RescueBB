@@ -117,6 +117,7 @@
     <None Include="DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
+    <None Include="Gantt\GanttRescueBB.gan" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -152,9 +153,6 @@
     <None Include="Resources\Gray.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\FONDOLEVEL1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\door-closed.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -164,16 +162,7 @@
     <None Include="Resources\Enemy.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\FONDOLEVEL2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\FONDOLEVEL2_2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\End %28Idle%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\globe-86243_640.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
@@ -182,24 +171,23 @@
     <None Include="Resources\Green.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\example.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Pato.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Battleship.wav" />
+    <Content Include="BBDD\RescueddBB.sql" />
     <Content Include="Resources\coinsound.wav" />
     <Content Include="Resources\enemyright.jpg" />
+    <Content Include="Resources\favicon.ico" />
     <Content Include="Resources\Level1Music.wav" />
     <Content Include="Resources\Level2Music.wav" />
     <Content Include="Resources\Level3Music.wav" />
     <Content Include="Resources\MainMusic.wav" />
     <Content Include="Resources\patoright.png" />
     <Content Include="Resources\playerleft.jpg" />
+    <Content Include="Resources\portada.png" />
     <Content Include="Resources\VictoryGameMusic.wav" />
   </ItemGroup>
   <ItemGroup>
