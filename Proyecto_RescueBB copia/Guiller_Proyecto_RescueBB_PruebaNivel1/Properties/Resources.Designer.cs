@@ -61,15 +61,6 @@ namespace Guiller_Proyecto_RescueBB_PruebaNivel1.Properties {
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Battleship {
-            get {
-                return ResourceManager.GetStream("Battleship", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap coin {
